@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mary\\Source\\Repos\\MariaOdinets\\TestMonitor\\TestMonitor.csproj": {}
+    "C:\\Users\\Mary\\source\\repos\\TestMonitor\\TestMonitor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mary\\Source\\Repos\\MariaOdinets\\TestMonitor\\TestMonitor.csproj": {
+    "C:\\Users\\Mary\\source\\repos\\TestMonitor\\TestMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mary\\Source\\Repos\\MariaOdinets\\TestMonitor\\TestMonitor.csproj",
+        "projectUniqueName": "C:\\Users\\Mary\\source\\repos\\TestMonitor\\TestMonitor.csproj",
         "projectName": "TestMonitor",
-        "projectPath": "C:\\Users\\Mary\\Source\\Repos\\MariaOdinets\\TestMonitor\\TestMonitor.csproj",
+        "projectPath": "C:\\Users\\Mary\\source\\repos\\TestMonitor\\TestMonitor.csproj",
         "packagesPath": "C:\\Users\\Mary\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mary\\Source\\Repos\\MariaOdinets\\TestMonitor\\obj\\",
+        "outputPath": "C:\\Users\\Mary\\source\\repos\\TestMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mary\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -88,6 +88,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
