@@ -35,6 +35,7 @@ namespace TestMonitor.Steps
             LoginPage.EnterEmail(email);
             LoginPage.EnterPassword(password);
             LoginPage.ClickLogin();
+            Thread.Sleep(1000);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Reflection;
+using TestMonitor.Models;
 
 namespace TestMonitor.Utilities.Configuration
 {
@@ -36,5 +37,25 @@ namespace TestMonitor.Utilities.Configuration
             }
         }
         public static string? BrowserType => Configuration[nameof(BrowserType)];
+
+        public static List<User?> Users
+        {
+            get
+            {
+                List<User?> users = new List<User?>();
+                var child = Configuration.GetSection("Users");
+                foreach (var section in child.GetChildren())
+                {
+                    var user = new User
+                    {
+                        Password = section["Password"],
+                        Email = section["Email"],
+                    };
+                    users.Add(user);
+                }
+                return users;
+            }
+        }
+        public static User? UserByEmail(string email) => Users.Find(x => x?.Email == email);
     }
 }

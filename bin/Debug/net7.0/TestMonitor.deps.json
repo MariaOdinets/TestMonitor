@@ -8,40 +8,39 @@
     ".NETCoreApp,Version=v7.0": {
       "TestMonitor/1.0.0": {
         "dependencies": {
-          "DotNetSeleniumExtras.PageObjects": "3.11.0",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Microsoft.NET.Test.Sdk": "17.5.0",
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
           "NUnit3TestAdapter": "4.4.2",
-          "Selenium.Support": "4.10.0",
-          "WebDriverManager": "2.16.2",
+          "Selenium.WebDriver": "4.10.0",
+          "WebDriverManager": "2.16.3",
           "coverlet.collector": "3.2.0"
         },
         "runtime": {
           "TestMonitor.dll": {}
         }
       },
-      "AngleSharp/0.17.1": {
+      "AngleSharp/1.0.4": {
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Text.Encoding.CodePages": "6.0.0"
+          "System.Text.Encoding.CodePages": "7.0.0"
         },
         "runtime": {
-          "lib/netstandard2.0/AngleSharp.dll": {
-            "assemblyVersion": "0.17.1.0",
-            "fileVersion": "0.17.1.0"
+          "lib/net7.0/AngleSharp.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         }
       },
       "coverlet.collector/3.2.0": {},
-      "DotNetSeleniumExtras.PageObjects/3.11.0": {
+      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
         "dependencies": {
           "Selenium.WebDriver": "4.10.0"
         },
         "runtime": {
-          "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {
+          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
             "assemblyVersion": "3.11.0.0",
             "fileVersion": "3.11.0.0"
           }
@@ -442,17 +441,6 @@
       },
       "NUnit.Analyzers/3.6.1": {},
       "NUnit3TestAdapter/4.4.2": {},
-      "Selenium.Support/4.10.0": {
-        "dependencies": {
-          "Selenium.WebDriver": "4.10.0"
-        },
-        "runtime": {
-          "lib/net6.0/WebDriver.Support.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.0.0"
-          }
-        }
-      },
       "Selenium.WebDriver/4.10.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
@@ -464,17 +452,15 @@
           }
         }
       },
-      "SharpZipLib/1.4.1": {
+      "SharpZipLib/1.4.2": {
         "runtime": {
           "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
-            "assemblyVersion": "1.4.1.12",
-            "fileVersion": "1.4.1.12"
+            "assemblyVersion": "1.4.2.13",
+            "fileVersion": "1.4.2.13"
           }
         }
       },
-      "System.Buffers/4.5.1": {},
       "System.Reflection.Metadata/1.6.0": {},
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.AccessControl/5.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -482,22 +468,18 @@
         }
       },
       "System.Security.Principal.Windows/5.0.0": {},
-      "System.Text.Encoding.CodePages/6.0.0": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        }
-      },
+      "System.Text.Encoding.CodePages/7.0.0": {},
       "System.Text.Encodings.Web/7.0.0": {},
       "System.Text.Json/7.0.0": {
         "dependencies": {
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
-      "WebDriverManager/2.16.2": {
+      "WebDriverManager/2.16.3": {
         "dependencies": {
-          "AngleSharp": "0.17.1",
+          "AngleSharp": "1.0.4",
           "Microsoft.Win32.Registry": "5.0.0",
-          "SharpZipLib": "1.4.1"
+          "SharpZipLib": "1.4.2"
         },
         "runtime": {
           "lib/netstandard2.1/WebDriverManager.dll": {
@@ -514,12 +496,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AngleSharp/0.17.1": {
+    "AngleSharp/1.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5MPI4bbixlwxb0W/smOMeIR+QlxMy5/5jD+WnIAw4pBC+7AhLPe5bS3cLgQMJyvd6q0A48sG+uYOt/ep406GLA==",
-      "path": "anglesharp/0.17.1",
-      "hashPath": "anglesharp.0.17.1.nupkg.sha512"
+      "sha512": "sha512-G8R4C2MEDFQvjUbYz1QIcGfibjsTJnzP0aWy8iQgWWk7eKacYydCNGD3JMhVL0Q5pZQ9RYlqpKNESEU5NpqsRw==",
+      "path": "anglesharp/1.0.4",
+      "hashPath": "anglesharp.1.0.4.nupkg.sha512"
     },
     "coverlet.collector/3.2.0": {
       "type": "package",
@@ -528,12 +510,12 @@
       "path": "coverlet.collector/3.2.0",
       "hashPath": "coverlet.collector.3.2.0.nupkg.sha512"
     },
-    "DotNetSeleniumExtras.PageObjects/3.11.0": {
+    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DJCLQ3beq1fzqpeQ5jTZwDqmzbOD2Xxsb/jCyShYam88CNwGGn5aBBqu4LVSj0sy0Ai76OauQQncYlC48VvQUQ==",
-      "path": "dotnetseleniumextras.pageobjects/3.11.0",
-      "hashPath": "dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512"
+      "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
+      "path": "dotnetseleniumextras.waithelpers/3.11.0",
+      "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.5.0": {
       "type": "package",
@@ -675,13 +657,6 @@
       "path": "nunit3testadapter/4.4.2",
       "hashPath": "nunit3testadapter.4.4.2.nupkg.sha512"
     },
-    "Selenium.Support/4.10.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-S/7nH+SMiCaut5C6kmMVxq4mCcmvwboPvPqdpx2/Dfwi2O9bFQb+psJC4ZcpvPMg7FCnrC1i6uZW6rthjSo1TQ==",
-      "path": "selenium.support/4.10.0",
-      "hashPath": "selenium.support.4.10.0.nupkg.sha512"
-    },
     "Selenium.WebDriver/4.10.0": {
       "type": "package",
       "serviceable": true,
@@ -689,19 +664,12 @@
       "path": "selenium.webdriver/4.10.0",
       "hashPath": "selenium.webdriver.4.10.0.nupkg.sha512"
     },
-    "SharpZipLib/1.4.1": {
+    "SharpZipLib/1.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X8QiHZS7+bbZy85LfpKCAL9oh0yZkiiecWhQL5F1Yn1AKFDYiOzR3UG5vI+9bDYGRGyseVdMW5sTH8mv8LXF1g==",
-      "path": "sharpziplib/1.4.1",
-      "hashPath": "sharpziplib.1.4.1.nupkg.sha512"
-    },
-    "System.Buffers/4.5.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
-      "path": "system.buffers/4.5.1",
-      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
+      "sha512": "sha512-yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A==",
+      "path": "sharpziplib/1.4.2",
+      "hashPath": "sharpziplib.1.4.2.nupkg.sha512"
     },
     "System.Reflection.Metadata/1.6.0": {
       "type": "package",
@@ -709,13 +677,6 @@
       "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
-    },
-    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
-      "path": "system.runtime.compilerservices.unsafe/6.0.0",
-      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "System.Security.AccessControl/5.0.0": {
       "type": "package",
@@ -731,12 +692,12 @@
       "path": "system.security.principal.windows/5.0.0",
       "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
     },
-    "System.Text.Encoding.CodePages/6.0.0": {
+    "System.Text.Encoding.CodePages/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
-      "path": "system.text.encoding.codepages/6.0.0",
-      "hashPath": "system.text.encoding.codepages.6.0.0.nupkg.sha512"
+      "sha512": "sha512-LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
+      "path": "system.text.encoding.codepages/7.0.0",
+      "hashPath": "system.text.encoding.codepages.7.0.0.nupkg.sha512"
     },
     "System.Text.Encodings.Web/7.0.0": {
       "type": "package",
@@ -752,12 +713,12 @@
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
     },
-    "WebDriverManager/2.16.2": {
+    "WebDriverManager/2.16.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-u3i47iOy8bgCOKSJMjWDKlP7GPmF1LXIe1l4zWoCKFfmZpRWzodbzBVSzlLYoMqDZBOPRCGo+REOQdPAxzSUMA==",
-      "path": "webdrivermanager/2.16.2",
-      "hashPath": "webdrivermanager.2.16.2.nupkg.sha512"
+      "sha512": "sha512-Snnr9ZhENnf/LF9lIrGXtfli+P2DCcLayzIc6gxpR1fMEHWRI8EUYlBCXOzx6ieV9cv/iU+7vO1asasS6rxvig==",
+      "path": "webdrivermanager/2.16.3",
+      "hashPath": "webdrivermanager.2.16.3.nupkg.sha512"
     }
   }
 }

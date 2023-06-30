@@ -10,9 +10,29 @@ namespace TestMonitor.Steps
     {
         protected IWebDriver Driver;
 
-        public LoginPage LoginPage => new LoginPage(Driver);
-        public DashboardPage DashboardPage => new DashboardPage(Driver);
-        //public ProjectsPage AddProjectPage => new ProjectsPage(Driver);
+        private LoginPage loginPage;
+        public LoginPage LoginPage
+        {
+            get
+            {
+                if (this.loginPage == null)
+                    this.loginPage = new LoginPage(Driver);
+
+                return this.loginPage;
+            }
+        }
+
+        public DashboardPage dashboardPage;
+        public DashboardPage DashboardPage
+        {
+            get
+            {
+                if (this.dashboardPage == null)
+                    this.dashboardPage = new DashboardPage(Driver);
+
+                return this.dashboardPage;
+            }
+        }
 
         public BaseStep(IWebDriver driver)
         {
