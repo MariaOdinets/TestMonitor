@@ -13,9 +13,14 @@ namespace TestMonitor.Pages
         private static readonly By rememberMeCheckbox = By.CssSelector(".b-checkbox checkbox");
         private static readonly By errorMessage = By.CssSelector(".message is-danger");
 
-        public LoginPage(IWebDriver driver) : base(driver)
+        public LoginPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
-            OpenPageByURL();
+
+        }
+
+        public LoginPage(IWebDriver driver) : base(driver, false)
+        {  
+            
         }
 
         public override bool IsPageOpened()

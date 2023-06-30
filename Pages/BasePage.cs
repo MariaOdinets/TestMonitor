@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using TestMonitor.Core;
 using TestMonitor.Utilities.Configuration;
 
 namespace TestMonitor.Pages
@@ -6,9 +7,16 @@ namespace TestMonitor.Pages
     public abstract class BasePage
     {
         protected IWebDriver Driver;
-        protected BasePage(IWebDriver driver)
+        protected WaitService WaitService;
+        public BasePage(IWebDriver driver, bool openPageByUrl)
         {
             Driver = driver;
+            WaitService = new WaitService(Driver);
+
+            if (openPageByUrl)
+            {
+                OpenPageByURL();
+            }
         }
 
         public abstract bool IsPageOpened();
