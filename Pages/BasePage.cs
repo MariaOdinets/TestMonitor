@@ -22,7 +22,7 @@ namespace TestMonitor.Pages
         public abstract bool IsPageOpened();
         protected void OpenPageByURL()
         {
-            Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
+            Driver.Navigate().GoToUrl(Configurator.AppSettings.URL); 
         }
     }
 }
