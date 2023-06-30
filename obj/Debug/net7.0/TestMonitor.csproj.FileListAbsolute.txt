@@ -15,7 +15,6 @@ C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\TestMonitor.runtimeconfi
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\TestMonitor.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\TestMonitor.pdb
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\AngleSharp.dll
-C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\SeleniumExtras.PageObjects.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -35,7 +34,6 @@ C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Microsoft.VisualStudio.T
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\NuGet.Frameworks.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\nunit.framework.dll
-C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\WebDriver.Support.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\WebDriver.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\ICSharpCode.SharpZipLib.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\WebDriverManager.dll
@@ -115,3 +113,4 @@ C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\refint\TestMonitor.dll
 C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\TestMonitor.pdb
 C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\TestMonitor.genruntimeconfig.cache
 C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\ref\TestMonitor.dll
+C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\SeleniumExtras.WaitHelpers.dll

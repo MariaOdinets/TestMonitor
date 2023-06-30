@@ -7,7 +7,7 @@ namespace TestMonitor.Pages
 {
     public class DashboardPage : BasePage
     {
-        private static readonly By manageProjectsButton = By.CssSelector(".button is-white");
+       private static readonly By manageProjectsButton = By.XPath("//*[contains(@class, 'button is-white')]");
        public DashboardPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
 
