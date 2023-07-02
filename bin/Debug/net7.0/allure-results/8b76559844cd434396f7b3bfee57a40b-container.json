@@ -1,0 +1,44 @@
+{
+  "uuid": "115ee293-2688-4271-b2c5-3e4b22730737-tc-0-1000",
+  "name": "TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest",
+  "children": [
+    "ac9e8aae-eaa7-475c-a811-8e002df47c3b-tr-0-1001"
+  ],
+  "befores": [
+    {
+      "name": "SetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1688306689754,
+      "stop": 1688306689754
+    }
+  ],
+  "afters": [
+    {
+      "name": "TearDown",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1688306689754,
+      "stop": 1688306689754
+    }
+  ],
+  "links": [],
+  "start": 1688306580094,
+  "stop": 1688306689770
+}
