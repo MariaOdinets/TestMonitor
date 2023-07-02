@@ -1,8 +1,6 @@
-﻿using NUnit.Allure.Attributes;
+﻿using NLog;
+using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TestMonitor.Models;
 using TestMonitor.Pages;
 
@@ -10,6 +8,7 @@ namespace TestMonitor.Steps
 {
     public class NavigationSteps : BaseStep
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         public NavigationSteps(IWebDriver driver) : base(driver)
         {
 

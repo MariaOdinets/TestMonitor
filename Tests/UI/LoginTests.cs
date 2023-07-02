@@ -1,10 +1,5 @@
 ﻿using Allure.Commons;
 using NUnit.Allure.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestMonitor.Utilities.Configuration;
 
 namespace TestMonitor.Tests.UI
@@ -21,7 +16,7 @@ namespace TestMonitor.Tests.UI
         public void SuccessfulLoginTest()
         {
             NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets@gmail.com"));
+            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets@gmail.co"));
 
             Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
         }
