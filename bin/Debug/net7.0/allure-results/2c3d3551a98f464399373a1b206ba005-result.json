@@ -1,0 +1,111 @@
+{
+  "uuid": "c27f5ba5-dbc5-483e-b9a8-8b8f713828d6-tr-0-1001",
+  "historyId": "TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest",
+  "fullName": "TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-DCV80O0"
+    },
+    {
+      "name": "package",
+      "value": "TestMonitor.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "SuccessfulLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "LoginTest"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Standard_user"
+    },
+    {
+      "name": "suite",
+      "value": "Passed_suite"
+    },
+    {
+      "name": "subSuite",
+      "value": "GUI"
+    },
+    {
+      "name": "tag",
+      "value": "regression"
+    }
+  ],
+  "links": [],
+  "name": "SuccessfulLoginTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:62524/session/4eec6e9e6798ff080493dd224daec8f3/url timed out after 60 seconds.\r\n  ----> System.Threading.Tasks.TaskCanceledException : The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.\r\n  ----> System.TimeoutException : The operation was canceled.\r\n  ----> System.Threading.Tasks.TaskCanceledException : The operation was canceled.\r\n  ----> System.IO.IOException : Unable to read data from the transport connection: Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения..\r\n  ----> System.Net.Sockets.SocketException : Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения.",
+    "trace": "   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(String url)\r\n   at TestMonitor.Pages.BasePage.OpenPageByURL() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Pages\\BasePage.cs:line 25\r\n   at TestMonitor.Pages.LoginPage..ctor(IWebDriver driver) in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Pages\\LoginPage.cs:line 23\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_o() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Steps\\NavigationSteps.cs:line 20\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_u(Object[])\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_w_0(Object[])\r\n   at TestMonitor.Steps.NavigationSteps.NavigateToLoginPage()\r\n   at TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Tests\\UI\\LoginTests.cs:line 18\r\n   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)\r\n   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)\r\n--TaskCanceledException\r\n   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)\r\n   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n--TimeoutException\r\n\r\n--TaskCanceledException\r\n   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)\r\n   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n--IOException\r\n   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)\r\n   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)\r\n   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n--SocketException\r\n"
+  },
+  "stage": "finished",
+  "description": "Successful Login\n",
+  "steps": [
+    {
+      "name": "SuccessfulLoginTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:62524/session/4eec6e9e6798ff080493dd224daec8f3/url timed out after 60 seconds.\r\n  ----> System.Threading.Tasks.TaskCanceledException : The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.\r\n  ----> System.TimeoutException : The operation was canceled.\r\n  ----> System.Threading.Tasks.TaskCanceledException : The operation was canceled.\r\n  ----> System.IO.IOException : Unable to read data from the transport connection: Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения..\r\n  ----> System.Net.Sockets.SocketException : Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения.",
+        "trace": "   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(String url)\r\n   at TestMonitor.Pages.BasePage.OpenPageByURL() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Pages\\BasePage.cs:line 25\r\n   at TestMonitor.Pages.LoginPage..ctor(IWebDriver driver) in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Pages\\LoginPage.cs:line 23\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_o() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Steps\\NavigationSteps.cs:line 20\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_u(Object[])\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_w_0(Object[])\r\n   at TestMonitor.Steps.NavigationSteps.NavigateToLoginPage()\r\n   at TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Tests\\UI\\LoginTests.cs:line 18\r\n   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)\r\n   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)\r\n--TaskCanceledException\r\n   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)\r\n   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n--TimeoutException\r\n\r\n--TaskCanceledException\r\n   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)\r\n   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n--IOException\r\n   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)\r\n   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)\r\n   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n--SocketException\r\n"
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Navigate to Login Page",
+          "status": "failed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false,
+            "message": "The HTTP request to the remote WebDriver server for URL http://localhost:62524/session/4eec6e9e6798ff080493dd224daec8f3/url timed out after 60 seconds.",
+            "trace": "   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(String url)\r\n   at TestMonitor.Pages.BasePage.OpenPageByURL() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Pages\\BasePage.cs:line 25\r\n   at TestMonitor.Pages.LoginPage..ctor(IWebDriver driver) in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Pages\\LoginPage.cs:line 23\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_o() in C:\\Users\\Mary\\source\\repos\\TestMonitor\\Steps\\NavigationSteps.cs:line 20\r\n   at TestMonitor.Steps.NavigationSteps.__a$_around_NavigateToLoginPage_100663324_u(Object[])\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapStep(String name, MethodBase methodBase, Object[] arguments, Func`2 method)"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1688306267191,
+          "stop": 1688306327237
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Screenshot",
+          "source": "35f6e779357f43a4b865cf5d17d3c85f-attachment",
+          "type": "image/png"
+        },
+        {
+          "name": "Console Output",
+          "source": "2793bf916e3f409ab513b055480b13f6-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1688306265396,
+      "stop": 1688306379300
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1688306265395,
+  "stop": 1688306379302
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VcFo6I9XrfNpkAQFtXItKpx/yi2OKFH2YYPktYG+yQ31tpjh0DeHG1zZg7zhLLX54OeHUfwiAZeLtxXsqZ3TIg==",
+  "dgSpecHash": "iFerrLxf8lFb9oFJjJECz9DVq06dv+7F/6Yv3IgCDIRwXRMvQtilgowLUt13Y/bBAXvsNEMlq3CEzm9JUxnX4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mary\\source\\repos\\TestMonitor\\TestMonitor.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\Mary\\.nuget\\packages\\mimetypesmap\\1.0.8\\mimetypesmap.1.0.8.nupkg.sha512",
     "C:\\Users\\Mary\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\Mary\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Mary\\.nuget\\packages\\nlog\\5.2.1\\nlog.5.2.1.nupkg.sha512",
     "C:\\Users\\Mary\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
     "C:\\Users\\Mary\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\Mary\\.nuget\\packages\\nunit.allure\\1.2.1.1\\nunit.allure.1.2.1.1.nupkg.sha512",

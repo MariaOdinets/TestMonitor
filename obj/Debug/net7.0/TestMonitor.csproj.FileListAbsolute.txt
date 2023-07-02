@@ -118,3 +118,4 @@ C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Allure.Commons.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\AspectInjector.Broker.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\MimeTypesMap.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\NUnit.Allure.dll
+C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\NLog.dll
