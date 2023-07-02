@@ -16,7 +16,7 @@ namespace TestMonitor.Tests.UI
         public void SuccessfulLoginTest()
         {
             NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets@gmail.co"));
+            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets@gmail.com"));
 
             Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
         }
