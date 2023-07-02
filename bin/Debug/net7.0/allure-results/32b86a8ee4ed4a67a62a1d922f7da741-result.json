@@ -1,0 +1,101 @@
+{
+  "uuid": "c9bb68fd-0646-455f-8f37-f854d302ea71-tr-0-1001",
+  "historyId": "TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest",
+  "fullName": "TestMonitor.Tests.UI.LoginTest.SuccessfulLoginTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-DCV80O0"
+    },
+    {
+      "name": "package",
+      "value": "TestMonitor.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "SuccessfulLoginTest"
+    },
+    {
+      "name": "testClass",
+      "value": "LoginTest"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Standard_user"
+    },
+    {
+      "name": "suite",
+      "value": "Passed_suite"
+    },
+    {
+      "name": "subSuite",
+      "value": "GUI"
+    },
+    {
+      "name": "tag",
+      "value": "regression"
+    }
+  ],
+  "links": [],
+  "name": "SuccessfulLoginTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "SuccessfulLoginTest"
+  },
+  "stage": "finished",
+  "description": "Successful Login\n",
+  "steps": [
+    {
+      "name": "SuccessfulLoginTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [
+        {
+          "name": "Navigate to Login Page",
+          "status": "passed",
+          "statusDetails": {
+            "known": false,
+            "muted": false,
+            "flaky": false
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1688299456235,
+          "stop": 1688299480628
+        }
+      ],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "0f1be68efa124e9f8130a4e8453e6ad7-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1688299454351,
+      "stop": 1688299484767
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1688299454351,
+  "stop": 1688299484769
+}
