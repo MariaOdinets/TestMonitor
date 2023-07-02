@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,7 @@ namespace TestMonitor.Steps
 
         }
 
+        [AllureStep("Navigate to Login Page")]
         public LoginPage NavigateToLoginPage()
         {
             return new LoginPage(Driver);
@@ -35,7 +37,6 @@ namespace TestMonitor.Steps
             LoginPage.EnterEmail(email);
             LoginPage.EnterPassword(password);
             LoginPage.ClickLogin();
-            Thread.Sleep(1000);
         }
     }
 }

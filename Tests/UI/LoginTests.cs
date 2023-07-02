@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Allure.Commons;
+using NUnit.Allure.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +11,12 @@ namespace TestMonitor.Tests.UI
 {
     public class LoginTest : BaseTest
     {
-        [Test]
+        [Test(Description = "Successful Login")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("Standard_user")]
+        [AllureSuite("Passed_suite")]
+        [AllureSubSuite("GUI")]
+        [AllureTag("regression")]
 
         public void SuccessfulLoginTest()
         {

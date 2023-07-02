@@ -114,3 +114,7 @@ C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\TestMonitor.pdb
 C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\TestMonitor.genruntimeconfig.cache
 C:\Users\Mary\source\repos\TestMonitor\obj\Debug\net7.0\ref\TestMonitor.dll
 C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\SeleniumExtras.WaitHelpers.dll
+C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\Allure.Commons.dll
+C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\AspectInjector.Broker.dll
+C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\MimeTypesMap.dll
+C:\Users\Mary\source\repos\TestMonitor\bin\Debug\net7.0\NUnit.Allure.dll
