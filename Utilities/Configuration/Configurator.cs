@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Reflection;
 using TestMonitor.Models;
+using TestMonitor.Models.Enums;
 
 namespace TestMonitor.Utilities.Configuration
 {
@@ -51,11 +52,18 @@ namespace TestMonitor.Utilities.Configuration
                         Password = section["Password"],
                         Email = section["Email"],
                     };
+                    user.UserType = section["UserType"]?.ToLower() switch
+                    {
+                        "admin" => UserType.Admin,
+                        "user" => UserType.User,
+                        _ => user.UserType
+                    };
                     users.Add(user);
                 }
                 return users;
             }
         }
+        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
         public static User? UserByEmail(string email) => Users.Find(x => x?.Email == email);
     }
 }

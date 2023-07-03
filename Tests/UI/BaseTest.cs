@@ -15,6 +15,7 @@ namespace TestMonitor.Tests.UI
 
         protected IWebDriver Driver;
         protected NavigationSteps NavigationSteps;
+        protected ProjectSteps ProjectSteps;
         private AllureLifecycle allure;
 
         [SetUp]
@@ -30,6 +31,8 @@ namespace TestMonitor.Tests.UI
             Driver = new Browser().Driver;
 
             NavigationSteps = new NavigationSteps(Driver);
+            ProjectSteps = new ProjectSteps(Driver);
+
             allure = AllureLifecycle.Instance;
         }
 
@@ -45,6 +48,7 @@ namespace TestMonitor.Tests.UI
             }
 
             Driver.Quit();
+            Driver.Dispose(); //освобождение ресурсов 
         }
     }
 }
