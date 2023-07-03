@@ -31,6 +31,17 @@ namespace TestMonitor.Steps
             return SuccessfulLogin(user.Email, user.Password);
         }
 
+        public LoginPage InvalidCredentialsLogin(string email, string password) 
+        {
+            Login(email, password);
+            return LoginPage;
+        }
+
+        public LoginPage InvalidCredentialsLogin(User user)
+        {
+            return InvalidCredentialsLogin(user.Email, user.Password);
+        }
+
         private void Login(string email, string password)
         {
             LoginPage.EnterEmail(email);

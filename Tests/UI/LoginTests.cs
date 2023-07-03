@@ -21,13 +21,18 @@ namespace TestMonitor.Tests.UI
             Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
         }
 
-        //[Test]
-        //public void IncorrectLogin()
-        //{
-        //    NavigationSteps.NavigateToLoginPage();
-        //    NavigationSteps.LockedLogin(Configurator.UserByUsername("locked_out_user"));
+        [Test(Description = "Invalid Credentials Login")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("Standard_user")]
+        [AllureSuite("Failed_suite")]
+        [AllureSubSuite("GUI")]
+        [AllureTag("regression")]
+        public void InvalidCredentialsLoginTest()
+        {
+            NavigationSteps.NavigateToLoginPage();
+            NavigationSteps.InvalidCredentialsLogin(Configurator.UserByEmail("sybogo@afia.pro"));
 
-        //    Assert.IsTrue(NavigationSteps.LoginPage.IsErrorButtonDisplayed());
-        //}
+            Assert.IsTrue(NavigationSteps.LoginPage.IsErrorMessageDisplayed());
+        }
     }
 }
