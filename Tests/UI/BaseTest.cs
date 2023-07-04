@@ -47,6 +47,7 @@ namespace TestMonitor.Tests.UI
                 allure.AddAttachment("Screenshot", "image/png", screenshotBytes);
             }
 
+            Thread.Sleep(1000); //temporary
             Driver.Quit();
             Driver.Dispose(); //освобождение ресурсов 
         }

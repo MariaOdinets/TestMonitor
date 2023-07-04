@@ -1,13 +1,8 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestMonitor.Pages
 {
-    public class AddProjectPage : BasePage
+    public class SettingsProjectsPage : BasePage
     {
         private static string END_POINT = "settings/projects";
 
@@ -17,14 +12,18 @@ namespace TestMonitor.Pages
         private static readonly By FeaturesButton = By.CssSelector(".modal-card [class = 'button is-primary']");
         private static readonly By TemplateButton = By.CssSelector(".modal-card [class = 'button is-primary']");
         private static readonly By CreateButton = By.CssSelector(".modal-card [class = 'button is-primary']");
+        private static readonly By ProjectTitleBy = By.XPath("//*[text()='Project_01']");
+        private static readonly By MeatballMenuButton = By.CssSelector(".dropdown-component [class = 'button is-white']");
+        private static readonly By DropdownArchive = By.XPath("//div[contains(text(), 'Archive...')]");
+        private static readonly By ArchiveButton = By.CssSelector(".buttons.is-right.is-fullwidth [class = 'button is-danger']");
         public IWebElement CreateProjectButton => Driver.FindElement(CreateProjectButtonBy);
 
-        public AddProjectPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
+        public SettingsProjectsPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
 
         }
 
-        public AddProjectPage(IWebDriver? driver) : base(driver, false)
+        public SettingsProjectsPage(IWebDriver? driver) : base(driver, false)
         {
 
         }
@@ -62,6 +61,26 @@ namespace TestMonitor.Pages
         public void ClickCreateButton()
         {
             Driver.FindElement(CreateButton).Click();
+        }
+
+        public void OpenProjectDetails()
+        {
+            Driver.FindElement(ProjectTitleBy).Click();
+        }
+
+        public void ClickMeatballMenu()
+        {
+            Driver.FindElement(MeatballMenuButton).Click();
+        }
+
+        public void SelectArchiveFromDropdown()
+        {
+            Driver.FindElement(DropdownArchive).Click();
+        }
+
+        public void ClickArchiveButton()
+        {
+            Driver.FindElement(ArchiveButton).Click();
         }
     }
 }

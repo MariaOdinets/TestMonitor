@@ -34,15 +34,15 @@ namespace TestMonitor.Steps
             }
         }
 
-        public AddProjectPage addProjectPage;
-        public AddProjectPage AddProjectPage
+        public SettingsProjectsPage settingsProjectsPage;
+        public SettingsProjectsPage SettingsProjectsPage
         {
             get
             {
-                if (this.addProjectPage == null)
-                    this.addProjectPage = new AddProjectPage(Driver);
+                if (this.settingsProjectsPage == null)
+                    this.settingsProjectsPage = new SettingsProjectsPage(Driver);
 
-                return this.addProjectPage;
+                return this.settingsProjectsPage;
             }
         }
 

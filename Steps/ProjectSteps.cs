@@ -11,32 +11,44 @@ namespace TestMonitor.Steps
         {
         }
 
-        public void NavigateToAddProjectPage()
+        public void NavigateToSettingsProjectsPage()
         {
-            new AddProjectPage(Driver, true);
+            new SettingsProjectsPage(Driver, true);
         }
 
-        public AddProjectPage CreateProject(string name, string description)
+        public SettingsProjectsPage CreateProject(string name, string description)
         {
             AddNewProject(name, description);
-            return AddProjectPage;
+            return SettingsProjectsPage;
         }
 
-        public AddProjectPage CreateProject(Project project)
+        public SettingsProjectsPage CreateProject(Project project)
         {
             return CreateProject(project.Name, project.Description);
         }
 
+        public SettingsProjectsPage DeleteAProject()
+        {
+            DeleteProject();
+            return SettingsProjectsPage;
+        }
+
         private void AddNewProject(string name, string description)
         {
-            AddProjectPage.CreateProjectButton.Click();
-            AddProjectPage.EnterProjectName(name);
-            AddProjectPage.EnterProjectDescription(description);
-            AddProjectPage.ClickFeaturesButton();
-            AddProjectPage.ClickTemplateButton();
-            AddProjectPage.ClickCreateButton();
+            SettingsProjectsPage.CreateProjectButton.Click();
+            SettingsProjectsPage.EnterProjectName(name);
+            SettingsProjectsPage.EnterProjectDescription(description);
+            SettingsProjectsPage.ClickFeaturesButton();
+            SettingsProjectsPage.ClickTemplateButton();
+            SettingsProjectsPage.ClickCreateButton();
+        }
 
-            //Assert.That();
+        private void DeleteProject()
+        {
+            SettingsProjectsPage.OpenProjectDetails();
+            SettingsProjectsPage.ClickMeatballMenu();
+            SettingsProjectsPage.SelectArchiveFromDropdown();
+            SettingsProjectsPage.ClickArchiveButton();
         }
     }
 }

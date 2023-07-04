@@ -15,9 +15,18 @@ namespace TestMonitor.Tests.UI
 
             NavigationSteps.NavigateToLoginPage();
             NavigationSteps.SuccessfulLogin(Configurator.Admin);
-            ProjectSteps.NavigateToAddProjectPage();
+            ProjectSteps.NavigateToSettingsProjectsPage();
             ProjectSteps.CreateProject(testProject);
-            Thread.Sleep(3000);
+            //Assert
+        }
+
+        [Test]
+        public void DeleteProjectTest()
+        {
+            NavigationSteps.NavigateToLoginPage();
+            NavigationSteps.SuccessfulLogin(Configurator.Admin);
+            ProjectSteps.NavigateToSettingsProjectsPage();
+            ProjectSteps.DeleteAProject();
         }
     }
 }
