@@ -34,6 +34,18 @@ namespace TestMonitor.Steps
             }
         }
 
+        public AddProjectPage addProjectPage;
+        public AddProjectPage AddProjectPage
+        {
+            get
+            {
+                if (this.addProjectPage == null)
+                    this.addProjectPage = new AddProjectPage(Driver);
+
+                return this.addProjectPage;
+            }
+        }
+
         public BaseStep(IWebDriver driver)
         {
             Driver = driver;

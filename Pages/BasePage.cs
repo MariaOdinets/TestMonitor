@@ -20,9 +20,10 @@ namespace TestMonitor.Pages
         }
 
         public abstract bool IsPageOpened();
+        protected abstract string GetEndpoint();
         protected void OpenPageByURL()
         {
-            Driver.Navigate().GoToUrl(Configurator.AppSettings.URL); 
+            Driver.Navigate().GoToUrl(Configurator.AppSettings.URL + GetEndpoint()); 
         }
     }
 }

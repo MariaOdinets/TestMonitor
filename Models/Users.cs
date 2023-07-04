@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using TestMonitor.Models.Enums;
 
 namespace TestMonitor.Models
 {
     public record User
     {
+        public UserType UserType { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
     }

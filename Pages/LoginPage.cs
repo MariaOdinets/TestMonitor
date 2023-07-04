@@ -1,12 +1,15 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace TestMonitor.Pages
 {
     public class LoginPage : BasePage
     {
+        private static string END_POINT = "";
+
         private static readonly By emailInput = By.Id("email");
         private static readonly By passwordInput = By.Id("password");
         private static readonly By loginButton = By.XPath("//*[contains(@class, 'button is-primary is-fullwidth')]");        
@@ -25,6 +28,11 @@ namespace TestMonitor.Pages
         public override bool IsPageOpened()
         {
             return Driver.FindElement(loginButton).Displayed;
+        }
+
+        protected override string GetEndpoint()
+        {
+            return END_POINT;
         }
 
         public void EnterEmail(string email)
