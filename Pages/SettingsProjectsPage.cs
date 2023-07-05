@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using TestMonitor.Models;
 
 namespace TestMonitor.Pages
 {
@@ -12,7 +13,7 @@ namespace TestMonitor.Pages
         private static readonly By FeaturesButton = By.CssSelector(".modal-card [class = 'button is-primary']");
         private static readonly By TemplateButton = By.CssSelector(".modal-card [class = 'button is-primary']");
         private static readonly By CreateButton = By.CssSelector(".modal-card [class = 'button is-primary']");
-        private static readonly By ProjectTitleBy = By.XPath("//*[text()='Project_01']");
+        private static readonly By ProjectTitleBy = By.XPath("//*[text()='Project_02']");
         private static readonly By MeatballMenuButton = By.CssSelector(".dropdown-component [class = 'button is-white']");
         private static readonly By DropdownArchive = By.XPath("//div[contains(text(), 'Archive...')]");
         private static readonly By ArchiveButton = By.CssSelector(".buttons.is-right.is-fullwidth [class = 'button is-danger']");
@@ -31,6 +32,11 @@ namespace TestMonitor.Pages
         public override bool IsPageOpened()
         {
             return WaitService.GetVisibleElement(CreateProjectButtonBy) != null;
+        }
+
+        public bool IsProjectDisplayed()
+        {
+            return WaitService.GetVisibleElement(ProjectTitleBy) != null;
         }
 
         protected override string GetEndpoint()

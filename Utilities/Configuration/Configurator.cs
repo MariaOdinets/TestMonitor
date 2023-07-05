@@ -64,6 +64,6 @@ namespace TestMonitor.Utilities.Configuration
             }
         }
         public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
-        public static User? UserByEmail(string email) => Users.Find(x => x?.Email == email);
+        public static User? UserByEmail(string email) => Users.Find(x => x?.Email == email);        
     }
 }

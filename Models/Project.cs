@@ -20,5 +20,15 @@ namespace TestMonitor.Models
             return
                 $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Description)}: {Description}";
         }
+
+        protected bool Equals(Project other)
+        {
+            return Name == other.Name && Description == other.Description;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return Equals(obj as Project);
+        }
     }
 }

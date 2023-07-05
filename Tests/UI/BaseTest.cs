@@ -4,6 +4,7 @@ using NUnit.Allure.Core;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using TestMonitor.Core;
+using TestMonitor.Pages;
 using TestMonitor.Steps;
 
 namespace TestMonitor.Tests.UI
@@ -17,6 +18,8 @@ namespace TestMonitor.Tests.UI
         protected NavigationSteps NavigationSteps;
         protected ProjectSteps ProjectSteps;
         private AllureLifecycle allure;
+        protected WaitService WaitService;
+        protected SettingsProjectsPage settingsProjectsPage;
 
         [SetUp]
         public void SetUp()
@@ -32,6 +35,8 @@ namespace TestMonitor.Tests.UI
 
             NavigationSteps = new NavigationSteps(Driver);
             ProjectSteps = new ProjectSteps(Driver);
+            WaitService = new WaitService(Driver);
+            settingsProjectsPage = new SettingsProjectsPage(Driver);
 
             allure = AllureLifecycle.Instance;
         }
@@ -47,9 +52,8 @@ namespace TestMonitor.Tests.UI
                 allure.AddAttachment("Screenshot", "image/png", screenshotBytes);
             }
 
-            Thread.Sleep(1000); //temporary
             Driver.Quit();
-            Driver.Dispose(); //освобождение ресурсов 
+            Driver.Dispose();
         }
     }
 }
