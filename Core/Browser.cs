@@ -16,7 +16,7 @@ namespace TestMonitor.Core
 
             Driver.Manage().Window.Maximize();
             Driver.Manage().Cookies.DeleteAllCookies();
-            if (Driver != null) Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(0);
+            if (Driver != null) Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
         }
 
         public IWebDriver Driver { get; set; }

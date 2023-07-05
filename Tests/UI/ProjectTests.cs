@@ -15,9 +15,24 @@ namespace TestMonitor.Tests.UI
 
             NavigationSteps.NavigateToLoginPage();
             NavigationSteps.SuccessfulLogin(Configurator.Admin);
-            ProjectSteps.NavigateToAddProjectPage();
+            ProjectSteps.NavigateToSettingsProjectsPage();
             ProjectSteps.CreateProject(testProject);
-            Thread.Sleep(3000);
+
+            Assert.IsTrue(settingsProjectsPage.IsProjectDisplayed());
+        }
+
+        [Test]
+        public void DeleteProjectTest()
+        {
+            var testProject = TestDataHelper.GetTestProject("Project1.json");
+
+            NavigationSteps.NavigateToLoginPage();
+            NavigationSteps.SuccessfulLogin(Configurator.Admin);
+            ProjectSteps.NavigateToSettingsProjectsPage();
+            ProjectSteps.CreateProject(testProject);
+            ProjectSteps.DeleteAProject();
+
+            Assert.IsTrue(!settingsProjectsPage.IsProjectDisplayed());
         }
     }
 }

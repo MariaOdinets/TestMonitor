@@ -27,7 +27,7 @@ namespace TestMonitor.Pages
 
         public override bool IsPageOpened()
         {
-            return Driver.FindElement(loginButton).Displayed;
+            return WaitService.GetVisibleElement(loginButton) != null;
         }
 
         protected override string GetEndpoint()
