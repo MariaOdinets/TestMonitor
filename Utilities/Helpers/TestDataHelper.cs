@@ -1,37 +1,30 @@
-﻿using System.Reflection;
+﻿using Newtonsoft.Json;
+using System.Reflection;
 using TestMonitor.Models;
 
 namespace TestMonitor.Utilities.Helpers
 {
     public class TestDataHelper
     {
-        public static Project GetTestProject(string FileName)
+        public static Project GetTestProject(string fileName)
         {
             var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var json = File.ReadAllText(basePath + Path.DirectorySeparatorChar + "TestData"
-                                        + Path.DirectorySeparatorChar + FileName);
-            return JsonHelper.FromJson(json).ToObject<Project>();
+            var json = File.ReadAllText(Path.Combine(basePath, "TestData", fileName));
+
+            return JsonConvert.DeserializeObject<Project>(json);
         }
 
-        public static List<Project?> Projects
+        public static List<Project> GetTestProjects(string fileName)
         {
-            get
-            {
-                List<Project?> projects = new List<Project?>();
+            var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var json = File.ReadAllText(Path.Combine(basePath, "TestData", fileName));
 
-                foreach (var  in )
-                {
-                    var project = new Project
-                    {
-                        Name = section["Name"],
-                        Type = section["Type"],
-                        Description = section["Description"]
-                    };
-                    projects.Add(project);
-                }
-                return projects;
-            }
+            return JsonConvert.DeserializeObject<List<Project>>(json);
         }
-        public static Project? ProjectByProjectType(string type) => Projects.Find(x => x?.Type == type);
-    }
+
+        public static Project? GetProjectByProjectType(string type, string fileName)
+        {
+            return GetTestProjects(fileName).Find(x => x?.Type == type);
+        }
+    } 
 }

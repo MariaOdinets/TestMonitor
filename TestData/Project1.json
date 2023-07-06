@@ -1,9 +1,8 @@
-{
-  "Projects": [
+[
     {
       "Name": "Project_01",
       "Type": "standart project",
-      "Description": "this project was created automatically"
+      "Description": "this project was created automatically, new version"
     },
     {
       "Name": "Project_02",
@@ -16,4 +15,3 @@
       "Description": "this project was created automatically to test name input max length"
     }
   ]
-}

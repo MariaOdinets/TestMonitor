@@ -11,12 +11,10 @@ namespace TestMonitor.Tests.UI
         [Test]
         public void CreateProjectTest()
         {
-            var testProject = TestDataHelper.GetTestProject("Project1.json");
-
             NavigationSteps.NavigateToLoginPage();
             NavigationSteps.SuccessfulLogin(Configurator.Admin);
             ProjectSteps.NavigateToSettingsProjectsPage();
-            ProjectSteps.CreateProject(testProject);
+            ProjectSteps.CreateProject(TestDataHelper.GetProjectByProjectType("standart project", "Project1.json"));
 
             Assert.IsTrue(settingsProjectsPage.IsProjectDisplayed());
         }
@@ -24,12 +22,10 @@ namespace TestMonitor.Tests.UI
         [Test]
         public void DeleteProjectTest()
         {
-            var testProject = TestDataHelper.GetTestProject("Project1.json");
-
             NavigationSteps.NavigateToLoginPage();
             NavigationSteps.SuccessfulLogin(Configurator.Admin);
             ProjectSteps.NavigateToSettingsProjectsPage();
-            ProjectSteps.CreateProject(testProject);
+            ProjectSteps.CreateProject(TestDataHelper.GetProjectByProjectType("create-delete project", "Project1.json"));
             ProjectSteps.DeleteAProject();
 
             Assert.IsTrue(!settingsProjectsPage.IsProjectDisplayed());
@@ -37,13 +33,13 @@ namespace TestMonitor.Tests.UI
 
         [Test]
         public void CheckNameInputMaxLength()
-        {
-            var testProject = TestDataHelper.GetTestProject("Project1.json");
-
+        {            
             NavigationSteps.NavigateToLoginPage();
             NavigationSteps.SuccessfulLogin(Configurator.Admin);
             ProjectSteps.NavigateToSettingsProjectsPage();
-            ProjectSteps.CreateProject(testProject);
+            ProjectSteps.CreateProject(TestDataHelper.GetProjectByProjectType("Project name max lenght", "Project1.json"));
+
+            //Assert.IsTrue(settingsProjectsPage.);
         }
     }
 }
