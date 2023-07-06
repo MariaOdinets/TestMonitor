@@ -49,6 +49,6 @@ namespace TestMonitor.Steps
             SettingsProjectsPage.ClickMeatballMenu();
             SettingsProjectsPage.SelectArchiveFromDropdown();
             SettingsProjectsPage.ClickArchiveButton();
-        }
+        }        
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using TestMonitor.Models;
 
 namespace TestMonitor.Utilities.Helpers
@@ -17,5 +12,26 @@ namespace TestMonitor.Utilities.Helpers
                                         + Path.DirectorySeparatorChar + FileName);
             return JsonHelper.FromJson(json).ToObject<Project>();
         }
+
+        public static List<Project?> Projects
+        {
+            get
+            {
+                List<Project?> projects = new List<Project?>();
+
+                foreach (var  in )
+                {
+                    var project = new Project
+                    {
+                        Name = section["Name"],
+                        Type = section["Type"],
+                        Description = section["Description"]
+                    };
+                    projects.Add(project);
+                }
+                return projects;
+            }
+        }
+        public static Project? ProjectByProjectType(string type) => Projects.Find(x => x?.Type == type);
     }
 }

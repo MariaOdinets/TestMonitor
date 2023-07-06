@@ -34,5 +34,16 @@ namespace TestMonitor.Tests.UI
 
             Assert.IsTrue(!settingsProjectsPage.IsProjectDisplayed());
         }
+
+        [Test]
+        public void CheckNameInputMaxLength()
+        {
+            var testProject = TestDataHelper.GetTestProject("Project1.json");
+
+            NavigationSteps.NavigateToLoginPage();
+            NavigationSteps.SuccessfulLogin(Configurator.Admin);
+            ProjectSteps.NavigateToSettingsProjectsPage();
+            ProjectSteps.CreateProject(testProject);
+        }
     }
 }

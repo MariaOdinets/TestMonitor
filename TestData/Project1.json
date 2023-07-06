@@ -1,5 +1,19 @@
 {
-  "Name": "Project_02",
-  "Type": 0,
-  "Description":  "this project was created automatically"
+  "Projects": [
+    {
+      "Name": "Project_01",
+      "Type": "standart project",
+      "Description": "this project was created automatically"
+    },
+    {
+      "Name": "Project_02",
+      "Type": "create-delete project",
+      "Description": "this project was created automatically"
+    },
+    {
+      "Name": "Nk3K78YMqsiD09zXRo5sGqeO0o7bggFPuouGdqe3EMbPwemdP46NmQl4FYeYhQdUczI2nt7ZsU7jaTZynrB3yxruzqQPDJbum100",
+      "Type": "Project name max lenght",
+      "Description": "this project was created automatically to test name input max length"
+    }
+  ]
 }
