@@ -28,13 +28,12 @@
     <None Update="AppSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\Project1.json">
+    <None Update="TestData\Projects.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TestData\" />
     <Folder Include="Tests\API\" />
   </ItemGroup>
 

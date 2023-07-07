@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools.V112.Runtime;
+using System.Xml.Linq;
 using TestMonitor.Models;
 using TestMonitor.Pages;
 
@@ -16,39 +17,26 @@ namespace TestMonitor.Steps
             new SettingsProjectsPage(Driver, true);
         }
 
-        public SettingsProjectsPage CreateProject(string name, string description)
-        {
-            AddNewProject(name, description);
-            return SettingsProjectsPage;
-        }
-
         public SettingsProjectsPage CreateProject(Project project)
         {
-            return CreateProject(project.Name, project.Description);
-        }
-
-        public SettingsProjectsPage DeleteAProject()
-        {
-            DeleteProject();
-            return SettingsProjectsPage;
-        }
-
-        private void AddNewProject(string name, string description)
-        {
             SettingsProjectsPage.CreateProjectButton.Click();
-            SettingsProjectsPage.EnterProjectName(name);
-            SettingsProjectsPage.EnterProjectDescription(description);
+            SettingsProjectsPage.EnterProjectName(project.Name);
+            SettingsProjectsPage.EnterProjectDescription(project.Description);
             SettingsProjectsPage.ClickFeaturesButton();
             SettingsProjectsPage.ClickTemplateButton();
             SettingsProjectsPage.ClickCreateButton();
+
+            return SettingsProjectsPage;
         }
 
-        private void DeleteProject()
+        public SettingsProjectsPage DeleteProject(Project project)
         {
-            SettingsProjectsPage.OpenProjectDetails();
+            SettingsProjectsPage.OpenProjectDetails(project);
             SettingsProjectsPage.ClickMeatballMenu();
             SettingsProjectsPage.SelectArchiveFromDropdown();
             SettingsProjectsPage.ClickArchiveButton();
-        }        
+
+            return SettingsProjectsPage;
+        }
     }
 }
