@@ -6,5 +6,5 @@ UI tests positive
 - Checking boundary values (Project name input field max length , max length - 1)
   
 UI tests negative
-- Login with invalid cfredentials
+- Login with invalid credentials
 - Checking boundary values (Project name input field max length + 1)
