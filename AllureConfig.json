@@ -2,8 +2,9 @@
   "allure": {
     "directory": "allure-results",
     "links": [
-      "https://example.org/{issue}", 
-      "https://example.org/{tms}" //?
+      "{links}",
+      "https://jira-devops-platform.bearingpoint.com/browse/{issue}",
+      "https://example.org/{tms}"
     ]
   }
 }
