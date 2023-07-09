@@ -24,7 +24,7 @@ namespace TestMonitor.Tests.UI
         [Test(Description = "Invalid Credentials Login")]
         [AllureSeverity(SeverityLevel.critical)]
         [AllureOwner("Standard_user")]
-        [AllureSuite("Failed_suite")]
+        [AllureSuite("Passed_suite")]
         [AllureSubSuite("GUI")]
         [AllureTag("regression")]
         public void InvalidCredentialsLoginTest()

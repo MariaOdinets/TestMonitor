@@ -33,6 +33,7 @@ namespace TestMonitor.Utilities.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
+                appSettings.Token = child["Token"];
 
                 return appSettings;
             }
