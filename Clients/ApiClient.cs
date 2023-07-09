@@ -12,12 +12,12 @@ namespace TestMonitor.Clients
 
         private readonly RestClient restClient;
 
-        public ApiClient()
+        public ApiClient(string accessToken)
         {
             var options = new RestClientOptions(baseUrl: Configurator.AppSettings.URL)
             {
-                Authenticator = new JwtAuthenticator(accessToken: Configurator.AppSettings.Token),
-                ThrowOnAnyError = true,
+                Authenticator = new JwtAuthenticator(accessToken: accessToken),
+                ThrowOnAnyError = false,
                 MaxTimeout = 10000
             };
 
@@ -39,28 +39,6 @@ namespace TestMonitor.Clients
         {
             logger.Info("Request: " + request.Resource);
             var response = restClient.Execute<T>(request);
-
-            logger.Info("Response Status: " + response.ResponseStatus);
-            logger.Info("Response Body: " + response.Content);
-
-            return response.Data;
-        }
-
-        public async Task<RestResponse> ExecuteAsync(RestRequest request)
-        {
-            logger.Info("Request: " + request.Resource);
-            var response = await restClient.ExecuteAsync(request);
-
-            logger.Info("Response Status: " + response.ResponseStatus);
-            logger.Info("Response Body: " + response.Content);
-
-            return response;
-        }
-
-        public async Task<T> ExecuteAsync<T>(RestRequest request) where T : new()
-        {
-            logger.Info("Request: " + request.Resource);
-            var response = await restClient.ExecuteAsync<T>(request);
 
             logger.Info("Response Status: " + response.ResponseStatus);
             logger.Info("Response Body: " + response.Content);
