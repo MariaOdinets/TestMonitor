@@ -10,7 +10,7 @@ using TestMonitor.Steps;
 namespace TestMonitor.Tests.UI
 {
     [AllureNUnit]
-    public class BaseTest
+    public class BaseTest 
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
