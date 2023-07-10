@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json.Linq;
 using NLog;
 using System.Net;
+using TestMonitor.Models;
+using TestMonitor.Services;
 using TestMonitor.Utilities.Helpers;
 
 namespace TestMonitor.Tests.API
@@ -14,14 +16,8 @@ namespace TestMonitor.Tests.API
         {
             var response = projectService.GetProject("33");
 
-            var json = response.Content;
-
             var expectedStatusCode = HttpStatusCode.OK;
             var actualStatusCode = response.StatusCode;
-
-            JToken? value = DeserialiseAndExtractFromJson(json);
-
-            logger.Info("jsonObject -> name: " + value);
 
             Assert.That(actualStatusCode, Is.EqualTo(expectedStatusCode));
         }
@@ -37,12 +33,29 @@ namespace TestMonitor.Tests.API
             Assert.That(actualStatusCode, Is.EqualTo(expectedStatusCode));
         }
 
-        private static JToken? DeserialiseAndExtractFromJson(string? json)
+        [Test(Description = "Get project unauthorized")]        
+        public void GetProjectUnauthorized()
         {
-            var jsonObject = JsonHelper.FromJson(json);
-            var value = jsonObject.SelectToken("$.name");
+            var response = projectServiceUnauthorized.GetProject("33");
 
-            return value;
+            var expectedStatusCode = HttpStatusCode.Unauthorized;
+            var actualStatusCode = response.StatusCode;
+
+            Assert.That(actualStatusCode, Is.EqualTo(expectedStatusCode));
         }
+
+        //[Test(Description = "Post a project")]
+        //public void PostAProject()
+        //{
+        //    var expectedProject = new Project();
+        //    expectedProject.Name = "Create a project (Post)";
+        //    expectedProject.Description = "This project was created automatically using 'Create a Project' POST method";
+        //    expectedProject.SymbolId = 42;
+
+        //    var actualProject = projectService.PostProject(expectedProject);
+            //logger.Info("Actual Project: " + actualProject.Result.ToString());
+
+            //Assert.That(expectedProject.Name, Is.EqualTo(actualProject.Name));
+        //}
     }
 }

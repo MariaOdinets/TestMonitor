@@ -11,7 +11,7 @@ namespace TestMonitor.Models
 {
     public class Project
     {
-        [JsonPropertyName("id")] public int Id { get; set; }
+        [JsonPropertyName("SymbolId")] public int SymbolId { get; set; }
         [JsonPropertyName("name")] public string Name { get; set; } = string.Empty;
         [JsonPropertyName("type")] public string Type { get; set; } = string.Empty;
         [JsonPropertyName("description")] public string Description { get; set; } = string.Empty;
@@ -19,17 +19,7 @@ namespace TestMonitor.Models
         public override string ToString()
         {
             return
-                $"{nameof(Id)}: {Id}, {nameof(Name)}: {Name}, {nameof(Description)}: {Description}, {nameof(Type)}: {Type}";
-        }
-
-        protected bool Equals(Project other)
-        {
-            return Name == other.Name && Description == other.Description && Type == other.Type;
-        }
-
-        public override bool Equals(object? obj)
-        {
-            return Equals(obj as Project);
+                $"{nameof(SymbolId)}: {SymbolId}, {nameof(Name)}: {Name}, {nameof(Description)}: {Description}, {nameof(Type)}: {Type}";
         }
     }
 }
