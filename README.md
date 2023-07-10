@@ -13,3 +13,4 @@ API tests
 - Get project
 - Get project (nonexistent id)
 - Get project (unauthorized)
+- Post project
