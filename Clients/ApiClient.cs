@@ -34,16 +34,5 @@ namespace TestMonitor.Clients
 
             return response;
         }
-
-        public T Execute<T>(RestRequest request) where T : new()
-        {
-            logger.Info("Request: " + request.Resource);
-            var response = restClient.Execute<T>(request);
-
-            logger.Info("Response Status: " + response.ResponseStatus);
-            logger.Info("Response Body: " + response.Content);
-
-            return response.Data;
-        }
     }
 }
