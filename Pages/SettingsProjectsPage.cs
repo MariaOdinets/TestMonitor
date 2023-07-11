@@ -7,15 +7,15 @@ namespace TestMonitor.Pages
     {
         private static string END_POINT = "settings/projects";
 
-        private static readonly By CreateProjectButtonBy = By.XPath("//*[contains(@class, 'button is-primary')]");
+        private static readonly By CreateProjectButtonBy = By.CssSelector("button.is-primary");
         private static readonly By NameInput = By.Name("name");
         private static readonly By DescriptionInput = By.Name("description");
-        private static readonly By FeaturesButton = By.CssSelector(".modal-card [class = 'button is-primary']");
-        private static readonly By TemplateButton = By.CssSelector(".modal-card [class = 'button is-primary']");
-        private static readonly By CreateButton = By.CssSelector(".modal-card [class = 'button is-primary']");
-        private static readonly By MeatballMenuButton = By.CssSelector(".dropdown-component [class = 'button is-white']");
+        private static readonly By FeaturesButton = By.CssSelector(".modal-card .button.is-primary");
+        private static readonly By TemplateButton = By.CssSelector(".modal-card .button.is-primary");
+        private static readonly By CreateButton = By.CssSelector(".modal-card .button.is-primary");
+        private static readonly By MeatballMenuButton = By.CssSelector(".dropdown-component .button.is-white");
         private static readonly By DropdownArchive = By.XPath("//div[contains(text(), 'Archive...')]");
-        private static readonly By ArchiveButton = By.CssSelector(".buttons.is-right.is-fullwidth [class = 'button is-danger']");
+        private static readonly By ArchiveButton = By.CssSelector(".buttons.is-right.is-fullwidth button.is-danger");
         public IWebElement CreateProjectButton => Driver.FindElement(CreateProjectButtonBy);
 
         public SettingsProjectsPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)

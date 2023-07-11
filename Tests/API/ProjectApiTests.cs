@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using NLog;
+using RestSharp;
 using System.Net;
 using TestMonitor.Models;
 using TestMonitor.Services;
@@ -44,18 +45,20 @@ namespace TestMonitor.Tests.API
             Assert.That(actualStatusCode, Is.EqualTo(expectedStatusCode));
         }
 
-        //[Test(Description = "Post a project")]
-        //public void PostAProject()
-        //{
-        //    var expectedProject = new Project();
-        //    expectedProject.Name = "Create a project (Post)";
-        //    expectedProject.Description = "This project was created automatically using 'Create a Project' POST method";
-        //    expectedProject.SymbolId = 42;
+        [Test(Description = "Post a project")]
+        public void PostProject()
+        {
+            var project = new Project();
+            project.Name = "Post project";
+            project.Description = "This project was created automatically using post method";
+            project.symbol_id = 1;
 
-        //    var actualProject = projectService.PostProject(expectedProject);
-            //logger.Info("Actual Project: " + actualProject.Result.ToString());
+            var actualProject = projectService.PostProject(project);
 
-            //Assert.That(expectedProject.Name, Is.EqualTo(actualProject.Name));
-        //}
+            var expectedStatusCode = HttpStatusCode.Created;
+            var actualStatusCode = actualProject.StatusCode;
+
+            Assert.That(actualStatusCode, Is.EqualTo(expectedStatusCode));
+        }
     }
 }

@@ -10,6 +10,6 @@ namespace TestMonitor.Utilities.Configuration
     {
         public static readonly string GET_PROJECT = "api/v1/projects/{projectId}";
 
-        public static readonly string POST_PROJECT = "/projects";
+        public static readonly string POST_PROJECT = "api/v1/projects";
     }
 }

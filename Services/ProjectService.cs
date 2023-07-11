@@ -7,8 +7,6 @@ namespace TestMonitor.Services
 {
     public class ProjectService : BaseService
     {
-        public static readonly string GET_PROJECT = "/projects/{projectId}";
-        public static readonly string POST_PROJECT = "/projects";
 
         public ProjectService(ApiClient apiClient) : base(apiClient)
         {
@@ -23,12 +21,13 @@ namespace TestMonitor.Services
             return apiClient.Execute(request);
         }
 
-        public Project GetAsProject(string projectId)
+        public RestResponse PostProject(Project project)
         {
-            var request = new RestRequest(GET_PROJECT)
-                .AddUrlSegment("projectId", projectId);
+            var request = new RestRequest(Endpoints.POST_PROJECT, Method.Post)
+                .AddHeader("Content-Type", "application/json")
+                .AddJsonBody(project);
 
-            return apiClient.Execute<Project>(request);
+            return apiClient.Execute(request);
         }
     }
 }
