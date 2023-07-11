@@ -35,5 +35,20 @@ namespace TestMonitor.Tests.UI
             Assert.That(NavigationSteps.LoginPage.IsErrorMessageDisplayed());
             Assert.That(NavigationSteps.LoginPage.GetErrorMessageText(), Is.EqualTo("These credentials do not match our records."));
         }
+
+        [Test(Description = "Login with no email")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("Standard_user")]
+        [AllureSuite("Failed_suite")]
+        [AllureSubSuite("GUI")]
+        [AllureTag("regression")]
+        public void NoEmailLoginTest()
+        {
+            NavigationSteps.NavigateToLoginPage();
+            NavigationSteps.InvalidCredentialsLogin("", "123");
+
+            Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
+            //Assert.That(NavigationSteps.LoginPage.GetErrorMessageText(), Is.EqualTo("These credentials do not match our records."));
+        }
     }
 }
