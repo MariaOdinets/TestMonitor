@@ -16,7 +16,7 @@ namespace TestMonitor.Tests.UI
         public void SuccessfulLoginTest()
         {
             NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets@gmail.com"));
+            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets+01@gmail.com"));
 
             Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
         }
@@ -32,7 +32,8 @@ namespace TestMonitor.Tests.UI
             NavigationSteps.NavigateToLoginPage();
             NavigationSteps.InvalidCredentialsLogin(Configurator.UserByEmail("sybogo@afia.pro"));
 
-            Assert.IsTrue(NavigationSteps.LoginPage.IsErrorMessageDisplayed());
+            Assert.That(NavigationSteps.LoginPage.IsErrorMessageDisplayed());
+            Assert.That(NavigationSteps.LoginPage.GetErrorMessageText(), Is.EqualTo("These credentials do not match our records."));
         }
     }
 }

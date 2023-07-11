@@ -24,13 +24,6 @@ namespace TestMonitor.Tests.UI
         [SetUp]
         public void SetUp()
         {
-            logger.Trace("Trace message");
-            logger.Debug("Debug message");
-            logger.Info("Info message");
-            logger.Warn("Warn message");
-            logger.Error("Error message");
-            logger.Fatal("Fatal message");
-
             Driver = new Browser().Driver;
 
             NavigationSteps = new NavigationSteps(Driver);
