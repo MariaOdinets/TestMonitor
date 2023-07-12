@@ -46,6 +46,18 @@ namespace TestMonitor.Steps
             }
         }
 
+        public AccountPage accountPage;
+        public AccountPage AccountPage
+        {
+            get
+            {
+                if (this.accountPage == null)
+                    this.accountPage = new AccountPage(Driver);
+
+                return this.accountPage;
+            }
+        }
+
         public BaseStep(IWebDriver driver)
         {
             Driver = driver;

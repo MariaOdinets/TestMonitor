@@ -10,6 +10,7 @@ namespace TestMonitor.Steps
     {
         public ProjectSteps(IWebDriver driver) : base(driver)
         {
+
         }
 
         public void NavigateToSettingsProjectsPage()

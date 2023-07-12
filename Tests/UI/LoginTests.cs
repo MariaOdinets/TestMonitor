@@ -15,10 +15,9 @@ namespace TestMonitor.Tests.UI
 
         public void SuccessfulLoginTest()
         {
-            NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.SuccessfulLogin(Configurator.UserByEmail("mariaodinets+01@gmail.com"));
+            navigationSteps.SuccessfulLogin(Configurator.Admin);
 
-            Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
+            Assert.IsTrue(navigationSteps.DashboardPage.IsPageOpened());
         }
 
         [Test(Description = "Invalid Credentials Login")]
@@ -29,11 +28,10 @@ namespace TestMonitor.Tests.UI
         [AllureTag("regression")]
         public void InvalidCredentialsLoginTest()
         {
-            NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.InvalidCredentialsLogin(Configurator.UserByEmail("sybogo@afia.pro"));
+            navigationSteps.InvalidCredentialsLogin(Configurator.UserByEmail("sybogo@afia.pro"));
 
-            Assert.That(NavigationSteps.LoginPage.IsErrorMessageDisplayed());
-            Assert.That(NavigationSteps.LoginPage.GetErrorMessageText(), Is.EqualTo("These credentials do not match our records."));
+            Assert.That(navigationSteps.LoginPage.IsErrorMessageDisplayed());
+            Assert.That(navigationSteps.LoginPage.GetErrorMessageText(), Is.EqualTo("These credentials do not match our records."));
         }
 
         [Test(Description = "Login with no email")]
@@ -44,11 +42,9 @@ namespace TestMonitor.Tests.UI
         [AllureTag("regression")]
         public void NoEmailLoginTest()
         {
-            NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.InvalidCredentialsLogin("", "123");
+            navigationSteps.InvalidCredentialsLogin(Configurator.UserByEmail(""));
 
-            Assert.IsTrue(NavigationSteps.DashboardPage.IsPageOpened());
-            //Assert.That(NavigationSteps.LoginPage.GetErrorMessageText(), Is.EqualTo("These credentials do not match our records."));
-        }
+            Assert.IsTrue(navigationSteps.DashboardPage.IsPageOpened());
+        }     
     }
 }

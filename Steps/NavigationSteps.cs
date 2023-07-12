@@ -44,6 +44,7 @@ namespace TestMonitor.Steps
 
         private void Login(string email, string password)
         {
+            NavigateToLoginPage();
             LoginPage.EnterEmail(email);
             LoginPage.EnterPassword(password);
             LoginPage.ClickLogin();

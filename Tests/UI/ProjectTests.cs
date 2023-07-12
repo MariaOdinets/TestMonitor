@@ -1,7 +1,4 @@
-﻿using Allure.Commons;
-using NUnit.Allure.Attributes;
-using TestMonitor.Models;
-using TestMonitor.Pages;
+﻿using TestMonitor.Models;
 using TestMonitor.Steps;
 using TestMonitor.Utilities.Configuration;
 using TestMonitor.Utilities.Helpers;
@@ -26,7 +23,7 @@ namespace TestMonitor.Tests.UI
             var testProject = TestDataHelper.GetProjectByProjectType("create-delete project", "Projects.json");
 
             CreateProject(testProject);
-            ProjectSteps.DeleteProject(testProject);
+            projectSteps.DeleteProject(testProject);
 
             Assert.IsTrue(!settingsProjectsPage.IsProjectDisplayed(testProject));
         }
@@ -52,7 +49,7 @@ namespace TestMonitor.Tests.UI
         }
 
         [Test(Description = "Project name input max length out of boundary value")]
-        public void CheckNameInputOutOfMaxLength()
+        public void CheckNameInputOutOfMaxLengthTest()
         {
             var testProject = TestDataHelper.GetProjectByProjectType("Project name max length + 1", "Projects.json");
 
@@ -61,12 +58,35 @@ namespace TestMonitor.Tests.UI
             Assert.IsTrue(!settingsProjectsPage.IsProjectDisplayed(testProject));
         }
 
+        [Test(Description = "Checking alert message when project is created")]
+        public void CheckCreateProjectAlertTest()
+        {
+            var testProject = TestDataHelper.GetProjectByProjectType("standart project", "Projects.json");
+
+            CreateProject(testProject);
+
+            Assert.IsTrue(settingsProjectsPage.IsProjectCreatedAlertDisplayed());
+            Assert.That(settingsProjectsPage.GetAlertMessageText(), Is.EqualTo($"Project {testProject.Name} created"));
+        }
+
+        [Test(Description = "Checking presence of dialog box")]
+        public void CheckDialogBoxTest()
+        {
+            var testProject = TestDataHelper.GetProjectByProjectType("standart project", "Projects.json");
+
+            CreateProject(testProject);
+            settingsProjectsPage.OpenProjectDetails(testProject);
+            settingsProjectsPage.ClickMeatballMenu();
+            settingsProjectsPage.SelectArchiveFromDropdown();
+
+            Assert.IsTrue(settingsProjectsPage.IsDialogBoxDisplayed());
+        }
+
         private void CreateProject(Project? testProject)
         {
-            NavigationSteps.NavigateToLoginPage();
-            NavigationSteps.SuccessfulLogin(Configurator.Admin);
-            ProjectSteps.NavigateToSettingsProjectsPage();
-            ProjectSteps.CreateProject(testProject);
+            navigationSteps.SuccessfulLogin(Configurator.Admin);
+            projectSteps.NavigateToSettingsProjectsPage();
+            projectSteps.CreateProject(testProject);
         }
     }
 }

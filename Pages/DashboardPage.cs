@@ -10,7 +10,7 @@ namespace TestMonitor.Pages
     {
        private static string END_POINT = "my-projects";
 
-       private static readonly By manageProjectsButton = By.CssSelector("button.is-white");
+       private static readonly By manageProjectsButton = By.CssSelector(".button.is-white");
        public DashboardPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
 
