@@ -15,22 +15,24 @@ namespace TestMonitor.Tests.UI
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
         protected IWebDriver Driver;
-        protected NavigationSteps NavigationSteps;
-        protected ProjectSteps ProjectSteps;
+        protected NavigationSteps navigationSteps;
+        protected ProjectSteps projectSteps;
         private AllureLifecycle allure;
-        protected WaitService WaitService;
+        protected WaitService waitService;
         protected SettingsProjectsPage settingsProjectsPage;
+        protected AccountPage accountPage;
+        protected AccountSteps accountSteps;
 
         [SetUp]
         public void SetUp()
         {
             Driver = new Browser().Driver;
-
-            NavigationSteps = new NavigationSteps(Driver);
-            ProjectSteps = new ProjectSteps(Driver);
-            WaitService = new WaitService(Driver);
+            navigationSteps = new NavigationSteps(Driver);
+            projectSteps = new ProjectSteps(Driver);
+            waitService = new WaitService(Driver);
             settingsProjectsPage = new SettingsProjectsPage(Driver);
-
+            accountPage = new AccountPage(Driver);
+            accountSteps = new AccountSteps(Driver);
             allure = AllureLifecycle.Instance;
         }
 

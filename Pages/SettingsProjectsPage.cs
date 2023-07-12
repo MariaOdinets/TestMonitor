@@ -15,7 +15,9 @@ namespace TestMonitor.Pages
         private static readonly By CreateButton = By.CssSelector(".modal-card .button.is-primary");
         private static readonly By MeatballMenuButton = By.CssSelector(".dropdown-component .button.is-white");
         private static readonly By DropdownArchive = By.XPath("//div[contains(text(), 'Archive...')]");
+        private static readonly By DialogBox = By.CssSelector(".modal-card");
         private static readonly By ArchiveButton = By.CssSelector(".buttons.is-right.is-fullwidth button.is-danger");
+        private static readonly By CreatedAlert = By.CssSelector(".notices.is-top .toast.is-success.is-top");
         public IWebElement CreateProjectButton => Driver.FindElement(CreateProjectButtonBy);
 
         public SettingsProjectsPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
@@ -93,6 +95,21 @@ namespace TestMonitor.Pages
         public void ClickArchiveButton()
         {
             Driver.FindElement(ArchiveButton).Click();
+        }
+
+        public bool IsProjectCreatedAlertDisplayed()
+        {
+            return WaitService.GetVisibleElement(CreatedAlert) != null;
+        }
+
+        public string GetAlertMessageText()
+        {
+            return Driver.FindElement(CreatedAlert).Text;
+        }
+
+        public bool IsDialogBoxDisplayed()
+        {
+            return WaitService.GetVisibleElement(DialogBox) != null;
         }
     }
 }
