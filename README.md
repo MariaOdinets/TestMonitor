@@ -4,6 +4,9 @@ UI tests positive
 - Creating a project
 - Deleting a project
 - Checking boundary values (Project name input field max length , max length - 1)
+- Popup message check
+- Dialog box check
+- Checking file upload
   
 UI tests negative
 - Login with invalid credentials
