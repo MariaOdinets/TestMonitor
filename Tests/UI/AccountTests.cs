@@ -7,14 +7,14 @@ namespace TestMonitor.Tests.UI
     public class AccountTests : BaseTest
     {
         [Test(Description = "Successful profile image upload")]
-
         public void CheckUploadImage()
-        {
+        {                       
             navigationSteps.SuccessfulLogin(Configurator.Admin);
             accountSteps.NavigateToAccountPage();
             accountPage.EditProfileIcon();
-
-            //Assert.That();
+            bool isWebEqualToLocal = accountPage.CompareWebImageWithLocal();  
+            
+            Assert.IsTrue(isWebEqualToLocal);
         }
     }
 }
